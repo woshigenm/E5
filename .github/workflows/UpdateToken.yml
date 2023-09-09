@@ -1,14 +1,10 @@
 #每周1，4，6自动更新refresh_token
 name: Update Token
 
-on: 
-  release:
-    types: [published]
+on:
   push:
-    tags:
-    - 'v*'
-  #  branches: 
-  #    - master
+    branches:
+      - main
   schedule:
     - cron: '10 10 * * 1,4,6'
   watch:
