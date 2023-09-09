@@ -1,14 +1,10 @@
 #创建系列api，每天调用一次
 name: Run Api.Write
 
-on: 
-  release:
-    types: [published]
+on:
   push:
-    tags:
-    - 'v*'
-  #  branches: 
-  #    - master
+    branches:
+      - main
   schedule:
     - cron: '12 1 * * *'
   watch:
